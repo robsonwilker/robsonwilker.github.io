@@ -1,0 +1,888 @@
+<!doctype html><html><head><!-- frame-runtime --><base href="/_f/1787531293-eb19/"><script>window.__FRAME_PREAMBLE={"capabilities":{"artifact":"artifact.oqIe8shs.js","assets":"assets.DBUJcvq_.js","comments":"comments.GLuHR3zP.js","db":"db.CRhVHzSt.js","downloads":"downloads.C3GSvEDP.js","embed":"embed.CZsbekoQ.js","mcp":"mcp.Bvma3qD7.js","network":"network.B5UA9Su4.js","permissions":"permissions.BNySkLV5.js","room":"room.DE7EMui-.js","sample":"sample.BW2Uysoh.js","self":"artifact.oqIe8shs.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.Dj21_51u.js","comments":"_comments.BOgkE6qU.js","translate":"_translate.5HCW4BJh.js"}</script><script>(function(){"use strict";var Y=["light","dark","system"],X=/^[A-Za-z0-9_-]{1,64}$/,D=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,G=new Set(["class","hidden","value","checked"]);function V(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||G.has(t)}var be="http://www.w3.org/1999/xhtml",Z="http://www.w3.org/2000/svg",J=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),Q=new Set(["script","style"]);function ee(e){const t=e.localName.toLowerCase();return e.namespaceURI==="http://www.w3.org/1999/xhtml"?!J.has(t):e.namespaceURI===Z?!Q.has(t):!1}var te=new Set(["html","head","body","frameset"]);function re(e){return e.namespaceURI==="http://www.w3.org/1999/xhtml"&&te.has(e.localName)}function ne(e){if(e===null||typeof e!="object")return!1;const t=e;if(typeof t.target!="string"||!X.test(t.target)||t.text!==void 0&&typeof t.text!="string")return!1;if(t.attrsSet!==void 0){if(t.attrsSet===null||typeof t.attrsSet!="object")return!1;for(const[n,s]of Object.entries(t.attrsSet))if(!D.test(n)||typeof s!="string")return!1}if(t.attrsRemoved!==void 0){if(!Array.isArray(t.attrsRemoved))return!1;for(const n of t.attrsRemoved)if(typeof n!="string"||!D.test(n))return!1}return!0}function se(e,t){if(e===null||typeof e!="object")return!1;const{seq:n,elements:s}=e;if(typeof n!="number"||!Number.isSafeInteger(n)||!Array.isArray(s)||s.length===0||s.length>64)return!1;for(let o=0;o<s.length;o++)if(!t(s[o]))return!1;return!0}function ae(e){return e===null||typeof e!="object"?!1:se(e.__frame_patch,ne)}function oe(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function ie(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function le(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&Y.includes(n)}var O="__frame_scroll",ce=150,ue=310,fe=160,pe=3e4;function de(){let e=0,t=!1,n=!1,s=!1,o=0,l=null;const c=i=>{try{sessionStorage.setItem(O,JSON.stringify({y:i}))}catch{}},f=()=>{if(clearTimeout(e),l===null)return;const i=l;l=null,c(i)},S=()=>{if(t){t=!1;return}n=!0,l=scrollY,clearTimeout(e),e=setTimeout(f,ce)};try{addEventListener("scroll",S,{passive:!0}),addEventListener("pagehide",f)}catch{}const v=()=>{let i;try{i=sessionStorage.getItem(O)}catch{return null}if(i===null)return null;let d;try{d=JSON.parse(i)}catch{d=null}const u=d?.y;if(!(typeof u=="number"&&Number.isFinite(u)&&u>=0)){try{sessionStorage.removeItem(O)}catch{}return null}return u};let b=!1;const m=i=>{try{const d=scrollY;scrollTo({top:i,left:0,behavior:"instant"}),o=i,s=!0,clearTimeout(e),l=null,c(i);const u=scrollY;u!==d&&(t=!0),u!==i&&!b&&(b=!0,addEventListener("load",()=>{try{if(scrollY===u){const h=v();m(h!==null?h:o)}}catch{}},{once:!0}))}catch{}},y=()=>{try{return!!location.hash}catch{return!0}};let g=!1;const E=()=>{try{if(g||innerWidth>ue||innerHeight>fe)return;g=!0;const i=Date.now(),d=()=>{try{removeEventListener("resize",d)}catch{}if(Date.now()-i>pe||n||y())return;const u=v();m(u!==null?u:o)};addEventListener("resize",d)}catch{}};let r=!1,p=!1;return{restore(){if(r||(r=!0,y()))return;const i=v();i!==null&&(m(i),E())},promoted(){if(p||(p=!0,y()))return;const i=v();i!==null?(m(i),E()):s&&m(o)}}}var Ee="modulepreload",Ae=function(e){return"/"+e},Re={},me=function(t,n,s){let o=Promise.resolve();function l(c){const f=new Event("vite:preloadError",{cancelable:!0});if(f.payload=c,window.dispatchEvent(f),!f.defaultPrevented)throw c}return o.then(c=>{for(const f of c||[])f.status==="rejected"&&l(f.reason);return t().catch(l)})};(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let s=0;for(let o=0;o<n.length;o++){const l=n[o];try{e(t,l,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[l]}catch{}try{e(t,l,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[l]=="function"&&s++}if(s&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:s},"*")}catch{}})();var he=1e4,_e=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function F(e){for(const t of _e)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var M=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),j=window.__FRAME_PREAMBLE?.transforms,N=window.__FRAME_PREAMBLE?.comments,I=window.__FRAME_PREAMBLE?.translate,L=/^[\w.-]+\.js$/;function T(e){return me(()=>import("/_runtime/"+e),void 0)}function z(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:W,pipe:()=>({wrap:(n,s)=>(...o)=>{try{return s(...o)}catch(l){return Promise.reject(l)}}})}}var P=null,w=null;function q(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var B=!1;function ve(e,t){const n=[];for(const s of e.elements){const o=document.querySelector(`[data-id="${s.target}"]`);if(!o){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(l=>!V(l))){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}if(s.text!==void 0&&(!ee(o)||re(o))){parent.postMessage({__frame_patch_miss:{seq:e.seq}},t);return}for(const[l,c]of Object.entries(s.attrsSet??{}))if(!$(o,l)){try{o.setAttribute(l,c)}catch{}H(o,l,c)}for(const l of s.attrsRemoved??[])$(o,l)||(o.removeAttribute(l),H(o,l,null));typeof s.text=="string"&&(o.textContent=s.text),n.push(s.target)}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:n}}))}catch{}}function H(e,t,n){if(!(e instanceof HTMLInputElement))return;const s=t.toLowerCase();s==="checked"?e.checked=n!==null:s==="value"&&e.type!=="file"&&(e.value=n??"")}function $(e,t){const n=t.toLowerCase(),s=e;return n==="data-id"||(n==="value"||n==="checked")&&(s.__artifactSecret===!0||/^(password|hidden|file)$/.test(s.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${s.autocomplete??""}`))}function K(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,B=!0):B&&(delete t.dataset.theme,t.style.colorScheme="",B=!1)}var R=new Map;function ye(){let e;const t={u:new Promise(n=>{e=n}),r:n=>{t.done=!0,e(n)},done:!1,nulled:!1};return t}var ge=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),W=(e,t)=>{const n=R.get(e);if(!n||n.done){n?.nulled&&w&&parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},w);return}const s=typeof t=="function"?Object.setPrototypeOf(t,ge):Object.assign(Object.create(null),t);typeof s.then=="function"&&delete s.then,n.r(Object.freeze(s))},U=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(U&&U.writable===!1)){const e=j&&L.test(j)?T(j).catch(()=>{}):Promise.resolve(void 0),t=r=>{if(r.type==="auxclick"&&r.button!==1)return;const p=r.target,i=p&&p.closest?p.closest("a[href],area[href]"):null;if(!i)return;const d=i.getAttribute("href");if(!d)return;let u,h;try{u=new URL(d,document.baseURI),h=new URL(document.baseURI).origin}catch{return}if((u.protocol==="http:"||u.protocol==="https:")&&u.origin!==h){r.preventDefault();const _=(i.getAttribute("target")??"").toLowerCase(),C=r.type==="auxclick"||r.metaKey||r.ctrlKey||r.shiftKey||r.altKey||!["","_self","_top","_parent"].includes(_);parent.postMessage({__frame_nav:!0,url:u.href,newTab:C},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const n={},s=r=>{r.isTrusted&&(n.pointer=!0)},o=r=>{r.isTrusted&&(n.click=!0)};addEventListener("pointermove",s,{capture:!0,passive:!0}),addEventListener("click",o,{capture:!0,passive:!0}),e.then(r=>{r?.wireNav&&(r.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",s,!0),removeEventListener("click",o,!0),r.wireEngagement?.(n))});let l=null;try{l=de()}catch{}const c=U?.value??{};q(window,"claude",c);for(const r of Object.keys(M)){if(c[r]!==void 0){q(c,r,c[r]);continue}R.set(r,ye())}if(c.use===void 0){const r=p=>{if(typeof p!="string"||!Object.hasOwn(M,p))return Promise.resolve(null);const i=R.get(p);return i?i.u:Promise.resolve(c[p]??null)};try{Object.defineProperty(c,"use",{value:r,writable:!0,configurable:!0,enumerable:!1})}catch{}}let f=null,S=null,v=0;const b=r=>{r.source!==parent||!F(r.origin)||oe(r.data)&&(f=r.data.__frame_init,w=r.origin,removeEventListener("message",b),clearTimeout(v),S?.())};addEventListener("message",b),parent.postMessage({__frame_connect:!0},"*");const m=new Promise(r=>{S=r,v=setTimeout(()=>{removeEventListener("message",b),r()},he)}),y=document.readyState==="loading"?new Promise(r=>document.addEventListener("DOMContentLoaded",()=>r(),{once:!0})):Promise.resolve();y.then(()=>{try{l?.restore()}catch{}});const g={cb:null},E=r=>{if(!(r.source!==parent||!F(r.origin))&&ie(r.data)){try{l?.promoted()}catch{}g.cb?.()}};addEventListener("message",E),m.then(async()=>{if(!f||!w){for(const a of R.values())a.nulled=!0,a.r(null);return}K(f.theme);const r=w;let p=!1,i=!1;addEventListener("message",a=>{if(a.source!==parent||a.origin!==r)return;le(a.data)&&K(a.data.__frame_theme.theme),ae(a.data)&&ve(a.data.__frame_patch,r);const k=a.data?.__fc_mode;k&&typeof k=="object"&&!p&&N&&L.test(N)&&(p=!0,T(N).then(x=>x.install?.(r,k.on===!0)).catch(()=>{}));const A=a.data?.__ft_cmd;A&&typeof A=="object"&&!i&&I&&L.test(I)&&(i=!0,T(I).then(x=>x.install?.(r,A)).catch(()=>{}))});const d=Object.keys(f.capabilities??{}).filter(a=>Object.hasOwn(M,a)).map(a=>[a,M[a]]).filter(a=>typeof a[1]=="string"&&L.test(a[1])),u=await Promise.allSettled(d.map(([,a])=>T(a))),h=await e,_=w;if(h?.buildBoot||parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},_),h?.buildBoot)try{P=h.buildBoot(f,h.TRANSFORMS??{},{shellOrigin:_,mount:W},a=>parent.postMessage({__frame_cap_telemetry:a},_))}catch{parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},_),P=z(f,_)}else P=z(f,_);const C=a=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:a}},_),we=P;u.forEach((a,k)=>{const A=d[k][0];if(a.status!=="fulfilled"){C(A);return}try{a.value?.install?.(we)}catch{C(A)}});for(const a of R.values())a.done||(a.nulled=!0,a.r(null));await y,parent.postMessage({__frame_ready:!0},w),e.then(a=>a?.installSizeReporter?.(_,g))})}})();</script><!-- /frame-runtime --><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Casos de Aperto Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#EFF3F4; --surface:#FFFFFF; --surface-2:#F7FAFB;
+  --ink:#111A1E; --ink-2:#33454E; --muted:#5E7079; --faint:#8FA3AC;
+  --line:#D9E2E6; --line-strong:#BECDD3;
+  --accent:#1B6C88; --accent-soft:#E2EFF4; --accent-ink:#0F4B60;
+  --brass:#9E5A15; --brass-soft:#F7EBDD;
+  --ok:#256A4C; --ok-soft:#E1F0E8;
+  --shadow:0 1px 2px rgba(17,26,30,.06),0 6px 16px -8px rgba(17,26,30,.18);
+  --radius:8px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1518; --surface:#171F23; --surface-2:#1D272C;
+    --ink:#E7EEF0; --ink-2:#C2D0D6; --muted:#93A5AD; --faint:#6C7F88;
+    --line:#26333A; --line-strong:#35464E;
+    --accent:#57A9C4; --accent-soft:#16323D; --accent-ink:#8FCADD;
+    --brass:#D08F45; --brass-soft:#33251488;
+    --ok:#6BB491; --ok-soft:#16302510;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 20px -10px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1518; --surface:#171F23; --surface-2:#1D272C;
+  --ink:#E7EEF0; --ink-2:#C2D0D6; --muted:#93A5AD; --faint:#6C7F88;
+  --line:#26333A; --line-strong:#35464E;
+  --accent:#57A9C4; --accent-soft:#16323D; --accent-ink:#8FCADD;
+  --brass:#D08F45; --brass-soft:#33251488;
+  --ok:#6BB491; --ok-soft:#16302510;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 20px -10px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;margin:0;text-wrap:balance;letter-spacing:.005em}
+.mono{font-family:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;font-variant-numeric:tabular-nums}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.eyebrow{
+  font-family:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+}
+/* ---------- shell ---------- */
+.wrap{max-width:1400px;margin:0 auto;padding:0 22px}
+header.top{
+  position:sticky;top:0;z-index:40;background:var(--surface);
+  border-bottom:1px solid var(--line);
+}
+.top-in{display:flex;align-items:center;gap:20px;padding:14px 0;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:0}
+.brand h1{font-size:26px;font-weight:700;line-height:1.1;margin-top:2px}
+.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 14px;border-radius:6px;border:1px solid var(--line-strong);
+  background:var(--surface);color:var(--ink);font-size:13px;font-weight:500;
+  cursor:pointer;transition:background .12s,border-color .12s;
+}
+.btn:hover{background:var(--surface-2);border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn svg{width:15px;height:15px;flex:none}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:6px;overflow:hidden}
+.seg button{
+  padding:7px 12px;background:var(--surface);border:0;cursor:pointer;
+  font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);
+}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:20px 0 0}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .n{font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:32px;font-weight:700;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:4px;letter-spacing:.03em}
+.stat.accent .n{color:var(--accent)}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* ---------- toolbar ---------- */
+.toolbar{display:flex;gap:10px;align-items:center;margin:16px 0 0;flex-wrap:wrap}
+.search{position:relative;flex:1 1 340px;min-width:0}
+.search input{
+  width:100%;padding:11px 14px 11px 38px;border:1px solid var(--line-strong);
+  border-radius:6px;background:var(--surface);
+}
+.search input::placeholder{color:var(--faint)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--faint)}
+select.sort{padding:10px 12px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface)}
+.count{font-size:13px;color:var(--muted);white-space:nowrap}
+.count b{color:var(--ink);font-weight:600}
+.chips-active{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.chip-x{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:5px;
+  background:var(--accent-soft);color:var(--accent-ink);font-size:12px;border:1px solid transparent;
+}
+.chip-x button{background:none;border:0;cursor:pointer;color:inherit;padding:0;line-height:1;font-size:14px;opacity:.7}
+.chip-x button:hover{opacity:1}
+.link-btn{background:none;border:0;color:var(--accent);cursor:pointer;font-size:12.5px;text-decoration:underline;padding:2px}
+/* ---------- layout ---------- */
+.cols{display:grid;grid-template-columns:250px 1fr;gap:22px;margin:18px 0 40px;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+aside .facet{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin-bottom:10px;overflow:hidden}
+aside .facet > summary{
+  padding:10px 13px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);
+}
+aside .facet > summary::-webkit-details-marker{display:none}
+aside .facet > summary::after{content:"+";color:var(--faint);font-weight:400;font-size:15px}
+aside .facet[open] > summary::after{content:"–"}
+.facet-body{padding:2px 13px 11px;max-height:250px;overflow-y:auto}
+.opt{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;font-size:13px}
+.opt input{accent-color:var(--accent);margin:0;flex:none}
+.opt span.t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.opt span.c{font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+.opt.off{opacity:.4}
+.note{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:12px 13px}
+.note h4{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+.note p{margin:0 0 7px;font-size:12.5px;color:var(--muted);line-height:1.45}
+.note p:last-child{margin-bottom:0}
+/* ---------- cards ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+  padding:15px;cursor:pointer;text-align:left;width:100%;
+  transition:border-color .12s,box-shadow .12s,transform .12s;display:flex;flex-direction:column;gap:9px;
+}
+.card:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-1px)}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card-id{font-size:11px;color:var(--faint);letter-spacing:.04em}
+.card h3{font-size:19px;font-weight:600;line-height:1.15}
+.card .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11.5px;line-height:1.35;
+  background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2)}
+.tag.accent{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.tag.torque{background:transparent;border-color:var(--line-strong);color:var(--muted);
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
+  font-size:11px;font-weight:600;letter-spacing:.03em}
+.pill.ind{background:var(--brass-soft);color:var(--brass)}
+.pill.ver{background:var(--ok-soft);color:var(--ok)}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.oems{display:flex;gap:5px;flex-wrap:wrap;padding-top:2px;border-top:1px solid var(--line);margin-top:2px}
+.oems .tag{font-size:11px;padding:2px 7px}
+.needline{font-size:12.5px;color:var(--muted);line-height:1.4}
+.empty{border:1px dashed var(--line-strong);border-radius:var(--radius);padding:44px 20px;text-align:center;color:var(--muted)}
+.empty h3{font-size:18px;color:var(--ink);margin-bottom:6px}
+/* ---------- dialog ---------- */
+dialog{
+  border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);
+  padding:0;max-width:820px;width:calc(100% - 32px);max-height:88vh;box-shadow:var(--shadow);
+}
+dialog::backdrop{background:rgba(9,16,20,.55)}
+.dlg-head{
+  position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--line);
+  padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;z-index:2;
+}
+.dlg-head h2{font-size:24px;font-weight:700;line-height:1.15}
+.dlg-body{padding:18px 20px 24px;overflow-y:auto}
+.x{background:none;border:0;font-size:22px;line-height:1;cursor:pointer;color:var(--muted);padding:2px 6px;flex:none}
+.x:hover{color:var(--ink)}
+.sec{margin-bottom:20px}
+.sec:last-child{margin-bottom:0}
+.sec > h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;
+  padding-bottom:5px;border-bottom:1px solid var(--line)}
+.sec ul{margin:0;padding-left:17px}
+.sec li{margin-bottom:5px;font-size:13.5px;color:var(--ink-2)}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;font-size:13.5px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;color:var(--ink-2)}
+.kv dd.na{color:var(--faint);font-style:italic}
+@media(max-width:560px){.kv{grid-template-columns:1fr;gap:2px 0}.kv dt{margin-top:8px}}
+/* ---------- form ---------- */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.f{display:flex;flex-direction:column;gap:4px}
+.f.wide{grid-column:1/-1}
+.f label{font-size:12px;font-weight:600;color:var(--ink-2)}
+.f .hint{font-size:11.5px;color:var(--faint)}
+.f input,.f select,.f textarea{
+  padding:8px 10px;border:1px solid var(--line-strong);border-radius:5px;background:var(--surface-2);width:100%;
+}
+.f textarea{resize:vertical;min-height:56px}
+.form-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.msg{font-size:12.5px}
+.msg.err{color:var(--brass)}
+.msg.ok{color:var(--ok)}
+.fieldset-h{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  grid-column:1/-1;margin-top:6px;padding-top:10px;border-top:1px solid var(--line)}
+.fieldset-h:first-child{margin-top:0;padding-top:0;border-top:0}
+footer.foot{border-top:1px solid var(--line);padding:18px 0 30px;color:var(--faint);font-size:12px}
+.ro-banner{background:var(--brass-soft);border:1px solid var(--brass);color:var(--brass);
+  padding:9px 13px;border-radius:6px;font-size:12.5px;margin-top:14px}
+</style>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">
+      <div class="eyebrow" id="eyebrow">Aperto manual · Motor Vehicle Industry</div>
+      <h1 id="page-title">Casos de Aplicação</h1>
+    </div>
+    <div class="top-actions">
+      <div class="seg" role="group" aria-label="Idioma">
+        <button type="button" id="lang-pt" aria-pressed="true">PT</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="btn" id="btn-export">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span id="t-export">Exportar</span>
+      </button>
+      <button type="button" class="btn primary" id="btn-new">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        <span id="t-new">Novo caso</span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <div id="ro-banner" hidden class="ro-banner"></div>
+  <section class="stats" id="stats"></section>
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.7" y2="16.7"/></svg>
+      <input type="search" id="q" autocomplete="off">
+    </div>
+    <select class="sort" id="sort"></select>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="chips-active" id="active"></div>
+  <div class="cols">
+    <aside>
+      <div id="facets"></div>
+      <div class="note">
+        <h4 id="t-note-h">Sobre os dados</h4>
+        <div id="note-body"></div>
+      </div>
+    </aside>
+    <main>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden></div>
+    </main>
+  </div>
+</div>
+<footer class="foot">
+  <div class="wrap" id="foot-text"></div>
+</footer>
+<dialog id="dlg-detail"><div id="detail-content"></div></dialog>
+<dialog id="dlg-form">
+  <div class="dlg-head">
+    <h2 id="form-title">Novo caso</h2>
+    <button type="button" class="x" data-close-form aria-label="Fechar">&times;</button>
+  </div>
+  <div class="dlg-body">
+    <form id="case-form"><div class="form-grid" id="form-fields"></div>
+      <div class="form-foot">
+        <span class="msg" id="form-msg"></span>
+        <span style="display:flex;gap:8px">
+          <button type="button" class="btn" data-close-form id="t-cancel">Cancelar</button>
+          <button type="submit" class="btn primary" id="t-save">Salvar caso</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</dialog>
+<script type="application/json" id="seed-data">{"version":1,"oems":[{"name":"Ford","group":"passenger"},{"name":"Fiat","group":"passenger"},{"name":"Daimler","group":"passenger"},{"name":"Volkswagen","group":"passenger"},{"name":"GM","group":"passenger"},{"name":"BMW","group":"passenger"},{"name":"Toyota","group":"passenger"},{"name":"Hyundai","group":"passenger"},{"name":"Kia","group":"passenger"},{"name":"Porsche","group":"passenger"},{"name":"Opel","group":"passenger"},{"name":"Audi","group":"passenger"},{"name":"Iveco","group":"truck"},{"name":"Kenworth","group":"truck"},{"name":"MAN","group":"truck"},{"name":"Volvo","group":"truck"},{"name":"Scania","group":"truck"},{"name":"Mack","group":"truck"}],"cases":[{"id":"AC-MVI-01","app":{"pt":"Pré-montagem de ABS","en":"ABS Preassembly"},"segment":"passenger","customers":["Ford","Fiat","Daimler","Volkswagen","GM","BMW","Toyota","Hyundai","Kia","Porsche"],"needs":[{"pt":"Tempo de ciclo curto","en":"Short cycle time"},{"pt":"Integração com MES","en":"MES integration"},{"pt":"Aperto de porcas de tubo","en":"Tube nut tightening"},{"pt":"Ergonomia","en":"Ergonomics"}],"needsRaw":{"en":["Short cycle time and batch of 6 tightenings per ABS device","Quick activation time required","Production line communication (Open Protocol)","End fitting for tube nuts tightening"],"pt":["Tempo de ciclo curto com batch de 6 apertos por dispositivo ABS","Tempo de ativação rápido","Comunicação com a linha de produção (Open Protocol)","End fitting para aperto de porcas de tubo"]},"tools":[{"model":"MWR-25 TA","qty":4,"note":"2 por estação"}],"controller":null,"protocols":["Open Protocol","Synatec HLT / SQS"],"strategies":[{"pt":"Estações virtuais","en":"Virtual stations"},{"pt":"Contagem de parafusos (batch)","en":"Bolt counting (batch)"},{"pt":"Vínculo do aperto ao VIN","en":"Tightening bound to VIN"}],"endFitting":{"pt":"Open-end com função catraca","en":"Open-end with ratchet functionality"},"torqueNm":25,"values":[{"pt":"Rastreabilidade total","en":"Full traceability"},{"pt":"Orientação ao operador","en":"Operator guidance"},{"pt":"Redução de retrabalho","en":"Reduced rework"},{"pt":"Ganho ergonômico","en":"Ergonomic gain"}],"valuesRaw":{"en":["Full traceability","Secured process through operator guidance","Reduced rework","Ergonomic end fitting"],"pt":["Rastreabilidade total","Processo seguro por orientação ao operador","Redução de retrabalho","End fitting ergonômico"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.9","notes":""},{"id":"AC-MVI-02","app":{"pt":"Montagem de fechadura de porta","en":"Door Lock Assembly"},"segment":"passenger","customers":["Ford","Fiat","Daimler","Volkswagen","GM","BMW","Toyota","Hyundai","Kia","Porsche"],"needs":[{"pt":"Junta crítica de segurança","en":"Safety critical joint"},{"pt":"Rastreabilidade","en":"Traceability"},{"pt":"Parafuso faltante ou esquecido","en":"Missing or forgotten bolts"},{"pt":"Aperto fora de especificação","en":"Improperly tightened bolts"}],"needsRaw":{"en":["Safety critical joint which requires traceability","Eliminate forgotten bolts","Reduce quantity of not properly tightened bolts"],"pt":["Junta crítica de segurança que exige rastreabilidade","Eliminar parafusos esquecidos","Reduzir a quantidade de parafusos apertados fora de especificação"]},"tools":[{"model":"MWR-50 TA","qty":2,"note":"lado esquerdo e direito"}],"controller":null,"protocols":["Open Protocol"],"strategies":[{"pt":"Rehit detection","en":"Rehit detection"},{"pt":"Monitoramento de ângulo","en":"Angle monitoring"},{"pt":"Contagem de parafusos (batch)","en":"Bolt counting (batch)"},{"pt":"Vínculo do aperto ao VIN","en":"Tightening bound to VIN"}],"endFitting":{"pt":"Hex-bit customizado","en":"Customized hex-bit"},"torqueNm":50,"values":[{"pt":"Rastreabilidade total","en":"Full traceability"},{"pt":"Eficiência de processo","en":"Improved process efficiency"},{"pt":"Redução de retrabalho","en":"Reduced rework"}],"valuesRaw":{"en":["Full traceability","Improved efficiency in the process","Reduced rework"],"pt":["Rastreabilidade total","Maior eficiência no processo","Redução de retrabalho"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.11","notes":""},{"id":"AC-MVI-03","app":{"pt":"Montagem de tubulação de combustível","en":"Fuel Pipe Assembly"},"segment":"passenger","customers":["Ford","Fiat","Daimler","Volkswagen","GM","BMW","Toyota","Hyundai","Kia","Porsche","Audi"],"needs":[{"pt":"Aperto de porcas de tubo","en":"Tube nut tightening"},{"pt":"Trabalho acima da cabeça","en":"Overhead working position"},{"pt":"Ergonomia","en":"Ergonomics"},{"pt":"Prevenção de vazamento","en":"Leakage prevention"},{"pt":"Integração com MES","en":"MES integration"}],"needsRaw":{"en":["Tube nuts tightening","Tool for ergonomic overhead working position","Reduce leakages","Production line communication"],"pt":["Aperto de porcas de tubo","Ferramenta ergonômica para trabalho acima da cabeça","Reduzir vazamentos","Comunicação com a linha de produção"]},"tools":[{"model":"MWR-25 TA","qty":1,"note":"pequena e leve, para operação overhead"}],"controller":null,"protocols":["Open Protocol"],"strategies":[{"pt":"Estratégia torque/ângulo","en":"Torque/Angle strategy"},{"pt":"Rehit detection","en":"Rehit detection"}],"endFitting":{"pt":"Catraca de anel aberto, específica para porcas de tubo","en":"Open-ring ratchet designed for tube nuts"},"torqueNm":25,"values":[{"pt":"Ganho ergonômico","en":"Ergonomic gain"},{"pt":"Baixo esforço de integração","en":"Low integration effort"},{"pt":"Armazenamento de dados","en":"Data storage"},{"pt":"Redução de retrabalho","en":"Reduced rework"},{"pt":"Redução do risco de vazamento","en":"Reduced risk of leakages"}],"valuesRaw":{"en":["Ergonomic light weight tool","Integration to existing MES","Data storage","Reduced rework","Significantly reduced risk of leakages"],"pt":["Ferramenta leve e ergonômica","Integração ao MES existente","Armazenamento de dados","Redução de retrabalho","Risco de vazamento significativamente menor"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.13","notes":""},{"id":"AC-MVI-04","app":{"pt":"Alinhamento de rodas","en":"Wheel Alignment"},"segment":"passenger","customers":["Ford","Fiat","Daimler","Volkswagen","GM","BMW","Toyota","Hyundai","Kia","Porsche","Opel","Audi"],"needs":[{"pt":"Trabalho acima da cabeça","en":"Overhead working position"},{"pt":"Seleção automática da ferramenta","en":"Automatic wrench selection"},{"pt":"Junta crítica de segurança","en":"Safety critical joint"},{"pt":"Acessibilidade restrita","en":"Poor accessibility"},{"pt":"Muitas ferramentas na mesma área","en":"Many tools in the same area"}],"needsRaw":{"en":["Overhead working position in the wheel alignment pit","Automatic Wrench selection by car model","Tools approved for safety critical applications","Special end fittings because of poor accessibility","15 tools in the same working area with stable communication"],"pt":["Trabalho acima da cabeça no fosso de alinhamento","Seleção automática da ferramenta por modelo de veículo","Ferramentas homologadas para aplicações críticas de segurança","End fittings especiais devido à acessibilidade ruim","15 ferramentas na mesma área com comunicação estável"]},"tools":[{"model":"MWR-200 TA","qty":3,"note":"3 valores de torque distintos"}],"controller":null,"protocols":["Open Protocol"],"strategies":[{"pt":"Rehit detection","en":"Rehit detection"},{"pt":"Monitoramento de ângulo","en":"Angle monitoring"},{"pt":"Vínculo do aperto ao VIN","en":"Tightening bound to VIN"}],"endFitting":{"pt":"End fittings customizados","en":"Customized end fittings"},"torqueNm":200,"values":[{"pt":"Rastreabilidade total","en":"Full traceability"},{"pt":"Fim do registro em papel","en":"No pen-and-paper records"},{"pt":"Redução de retrabalho","en":"Reduced rework"}],"valuesRaw":{"en":["Full traceability","Reduced operator efforts by removing pen and paper documentation","Reduced rework"],"pt":["Rastreabilidade total","Menos esforço do operador com o fim do registro em papel","Redução de retrabalho"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.15","notes":""},{"id":"AC-MVI-05","app":{"pt":"Sensor de escapamento","en":"Exhaust Sensor"},"segment":"passenger","customers":["Ford","Fiat","Daimler","Volkswagen","GM","BMW","Toyota","Hyundai","Kia","Porsche","Opel","Audi"],"needs":[{"pt":"Seleção automática da ferramenta","en":"Automatic wrench selection"},{"pt":"Acessibilidade restrita","en":"Poor accessibility"},{"pt":"Integração com MES","en":"MES integration"},{"pt":"Identificação por VIN","en":"VIN identification"}],"needsRaw":{"en":["Automatic wrench selection depending on sensor type","Tools with good accessibility to the sensors","Integration into existing MES","VIN identification for each assembled sensor"],"pt":["Seleção automática da ferramenta conforme o tipo de sensor","Ferramentas com boa acessibilidade aos sensores","Integração ao MES existente","Identificação por VIN para cada sensor montado"]},"tools":[{"model":"MWR-85 TA","qty":2,"note":"cobre os dois tipos de sensor"}],"controller":"Focus 61","protocols":["Ford CEC AIS Box"],"strategies":[{"pt":"Rehit detection","en":"Rehit detection"},{"pt":"Monitoramento de ângulo","en":"Angle monitoring"}],"endFitting":{"pt":"Open-end com função catraca","en":"Open-end with ratchet function"},"torqueNm":85,"values":[{"pt":"Redução de defeitos","en":"Reduced defect rate"},{"pt":"À prova de erro","en":"Error proofing"},{"pt":"Baixo esforço de integração","en":"Low integration effort"}],"valuesRaw":{"en":["Reduced rate of defective sensors","Error proofing for no missing sensors","Low integration efforts into standardized MES"],"pt":["Menor índice de sensores defeituosos","Poka-yoke contra sensor faltante","Baixo esforço de integração ao MES padronizado"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.17","notes":""},{"id":"AC-MVI-06","app":{"pt":"Componentes de direção","en":"Steering Parts"},"segment":"truck","customers":["Ford","Iveco","Daimler","Volkswagen","GM","Kenworth","MAN","Hyundai","Volvo","Scania","Mack"],"needs":[{"pt":"Junta crítica de segurança","en":"Safety critical joint"},{"pt":"Seleção automática da ferramenta","en":"Automatic wrench selection"},{"pt":"Integração com MES","en":"MES integration"},{"pt":"Parafuso faltante ou esquecido","en":"Missing or forgotten bolts"}],"needsRaw":{"en":["Suitable wrench for safety critical application","Automatic wrench selection depending on truck model","Left and right side assembly simultaneously","Integration into existing MES and data collection system"],"pt":["Ferramenta adequada a aplicação crítica de segurança","Seleção automática da ferramenta conforme o modelo de caminhão","Montagem simultânea dos lados esquerdo e direito","Integração ao MES e ao sistema de coleta de dados existentes"]},"tools":[{"model":"MWR-200 TA","qty":6,"note":""},{"model":"MWR-KIT","qty":3,"note":""}],"controller":"Power Focus 6000","protocols":["Open Protocol","IPM Result reporting"],"strategies":[{"pt":"Rehit detection","en":"Rehit detection"},{"pt":"Contagem de parafusos (batch)","en":"Bolt counting (batch)"},{"pt":"Vínculo do aperto ao VIN","en":"Tightening bound to VIN"}],"endFitting":{"pt":"—","en":"—"},"torqueNm":200,"values":[{"pt":"Rastreabilidade total","en":"Full traceability"},{"pt":"Orientação ao operador","en":"Operator guidance"},{"pt":"À prova de erro","en":"Error proofing"}],"valuesRaw":{"en":["Full traceability of safety critical assembly process","Operator guidance for correct wrench selection","No missing bolts on final product"],"pt":["Rastreabilidade total do processo crítico de segurança","Orientação ao operador na escolha correta da ferramenta","Nenhum parafuso faltante no produto final"]},"plant":"","country":"","date":"","owner":"","result":"","status":"reference","confidence":"indicative","source":"Application Guide AP_MT_04 (2020), p.19","notes":""}]}</script>
+<script>
+(function () {
+  "use strict";
+  var DATA_PATH = "data/cases.json";
+  // ---------------- i18n ----------------
+  var STR = {
+    pt: {
+      eyebrow: "Aperto manual · Motor Vehicle Industry",
+      title: "Casos de Aplicação",
+      search: "Buscar por montadora, operação, ferramenta, protocolo…",
+      export: "Exportar", newCase: "Novo caso", cancel: "Cancelar", save: "Salvar caso",
+      formTitle: "Novo caso", clearAll: "Limpar filtros",
+      stats: ["Casos", "Montadoras", "Operações", "Verificados"],
+      sort: { app: "Operação (A–Z)", oem: "Mais montadoras", torque: "Maior torque", conf: "Verificados primeiro" },
+      facets: { customers: "Montadora", segment: "Segmento", needs: "Necessidade", tools: "Ferramenta", protocols: "Protocolo", confidence: "Confiança" },
+      seg: { passenger: "Automóvel", truck: "Caminhão" },
+      conf: { indicative: "Indicativo", verified: "Verificado" },
+      status: { reference: "Referência", poc: "POC", proposal: "Proposta", dropped: "Descartado" },
+      showing: function (n, t) { return "<b>" + n + "</b> de " + t + " casos"; },
+      emptyH: "Nenhum caso corresponde aos filtros",
+      emptyP: "Tente remover um filtro ou usar um termo de busca mais amplo.",
+      noteH: "Sobre os dados",
+      noteP: [
+        "Os 6 casos iniciais vêm do Application Guide AP_MT_04 (Atlas Copco BLM, abril/2020), páginas 9 a 19.",
+        "<b>Indicativo</b>: a faixa de logos do guia associa marcas a uma aplicação em nível de segmento — os mesmos 10 logos do automotivo leve aparecem em 5 das 6 operações. Leia como “este segmento usa”, não como “esta planta fez”.",
+        "<b>Verificado</b>: caso próprio, com planta, data e responsável preenchidos. É o nível que sustenta uma proposta."
+      ],
+      sec: { needs: "Necessidades", solution: "Solução", values: "Valores", customers: "Montadoras", field: "Dados de campo", source: "Origem" },
+      k: {
+        tools: "Ferramentas", controller: "Controlador", protocols: "Protocolos", strategies: "Estratégias",
+        endFitting: "End fitting", torque: "Torque", plant: "Planta", country: "País", date: "Data",
+        owner: "Responsável", result: "Resultado", status: "Status", source: "Fonte", notes: "Notas", segment: "Segmento"
+      },
+      na: "não informado",
+      form: {
+        secIdent: "Identificação", secApp: "Aplicação", secSol: "Solução", secField: "Dados de campo", secMeta: "Registro",
+        id: "ID", appPt: "Operação (PT)", appEn: "Operation (EN)", segment: "Segmento",
+        customers: "Montadoras", customersH: "separe por vírgula",
+        needs: "Necessidades", needsH: "separe por vírgula",
+        tools: "Ferramentas", toolsH: "ex.: 2x MWR-85 TA, 1x MWR-KIT",
+        torque: "Torque (Nm)", controller: "Controlador",
+        protocols: "Protocolos", strategies: "Estratégias", endFitting: "End fitting",
+        values: "Valores", plant: "Planta", country: "País", date: "Data", dateH: "mm/aaaa",
+        owner: "Responsável", result: "Resultado quantificado", resultH: "com número, ex.: retrabalho de 4,2% para 0,8%",
+        status: "Status", confidence: "Confiança", source: "Fonte", notes: "Notas"
+      },
+      errName: "Informe ao menos o nome da operação.",
+      saving: "Salvando…", saved: "Caso salvo e publicado para todos.",
+      savedLocal: "Caso adicionado apenas nesta sessão — a gravação compartilhada não está disponível aqui.",
+      errConflict: "Outra pessoa publicou antes. Esta página vai recarregar com a versão mais recente.",
+      errWrite: "Você tem acesso somente leitura a este painel.",
+      errSave: "Não foi possível salvar. Tente novamente em instantes.",
+      roBanner: "Você está vendo este painel em modo somente leitura. Dá para consultar e exportar, mas não cadastrar casos.",
+      expDone: "Arquivo enviado para download.",
+      foot: "Base: Atlas Copco BLM, “Application Guide: manual tightening” (AP_MT_04), abril/2020 — páginas 9 a 19. Campos de campo e casos novos são alimentados por este painel."
+    },
+    en: {
+      eyebrow: "Manual tightening · Motor Vehicle Industry",
+      title: "Application Cases",
+      search: "Search by OEM, operation, tool, protocol…",
+      export: "Export", newCase: "New case", cancel: "Cancel", save: "Save case",
+      formTitle: "New case", clearAll: "Clear filters",
+      stats: ["Cases", "OEMs", "Operations", "Verified"],
+      sort: { app: "Operation (A–Z)", oem: "Most OEMs", torque: "Highest torque", conf: "Verified first" },
+      facets: { customers: "OEM", segment: "Segment", needs: "Need", tools: "Tool", protocols: "Protocol", confidence: "Confidence" },
+      seg: { passenger: "Passenger car", truck: "Truck" },
+      conf: { indicative: "Indicative", verified: "Verified" },
+      status: { reference: "Reference", poc: "POC", proposal: "Proposal", dropped: "Dropped" },
+      showing: function (n, t) { return "<b>" + n + "</b> of " + t + " cases"; },
+      emptyH: "No case matches these filters",
+      emptyP: "Try removing a filter or using a broader search term.",
+      noteH: "About the data",
+      noteP: [
+        "The 6 seed cases come from the Application Guide AP_MT_04 (Atlas Copco BLM, April 2020), pages 9 to 19.",
+        "<b>Indicative</b>: the guide's logo strip links brands to an application at segment level — the same 10 passenger-car logos appear in 5 of the 6 operations. Read it as “this segment uses it”, not “this plant did it”.",
+        "<b>Verified</b>: your own case, with plant, date and owner filled in. That is the level that supports a proposal."
+      ],
+      sec: { needs: "Needs", solution: "Solution", values: "Values", customers: "OEMs", field: "Field data", source: "Origin" },
+      k: {
+        tools: "Tools", controller: "Controller", protocols: "Protocols", strategies: "Strategies",
+        endFitting: "End fitting", torque: "Torque", plant: "Plant", country: "Country", date: "Date",
+        owner: "Owner", result: "Result", status: "Status", source: "Source", notes: "Notes", segment: "Segment"
+      },
+      na: "not recorded",
+      form: {
+        secIdent: "Identification", secApp: "Application", secSol: "Solution", secField: "Field data", secMeta: "Record",
+        id: "ID", appPt: "Operação (PT)", appEn: "Operation (EN)", segment: "Segment",
+        customers: "OEMs", customersH: "comma separated",
+        needs: "Needs", needsH: "comma separated",
+        tools: "Tools", toolsH: "e.g. 2x MWR-85 TA, 1x MWR-KIT",
+        torque: "Torque (Nm)", controller: "Controller",
+        protocols: "Protocols", strategies: "Strategies", endFitting: "End fitting",
+        values: "Values", plant: "Plant", country: "Country", date: "Date", dateH: "mm/yyyy",
+        owner: "Owner", result: "Quantified result", resultH: "with a number, e.g. rework from 4.2% to 0.8%",
+        status: "Status", confidence: "Confidence", source: "Source", notes: "Notes"
+      },
+      errName: "Enter at least the operation name.",
+      saving: "Saving…", saved: "Case saved and published for everyone.",
+      savedLocal: "Case added to this session only — shared saving is not available here.",
+      errConflict: "Someone published first. This page will reload with the latest version.",
+      errWrite: "You have read-only access to this dashboard.",
+      errSave: "Could not save. Please try again shortly.",
+      roBanner: "You are viewing this dashboard in read-only mode. You can browse and export, but not add cases.",
+      expDone: "File sent to download.",
+      foot: "Source: Atlas Copco BLM, “Application Guide: manual tightening” (AP_MT_04), April 2020 — pages 9 to 19. Field data and new cases are fed through this dashboard."
+    }
+  };
+  // ---------------- state ----------------
+  var lang = "pt";
+  var state = null;          // {version, oems, cases}
+  var artifactNS = null;     // capability namespace or null
+  var canWrite = false;
+  var filters = { customers: [], segment: [], needs: [], tools: [], protocols: [], confidence: [] };
+  var query = "";
+  var sortBy = "app";
+  function T() { return STR[lang]; }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function L(o) { if (!o) return ""; return (typeof o === "string") ? o : (o[lang] || o.pt || o.en || ""); }
+  function byId(id) { return document.getElementById(id); }
+  // ---------------- derived ----------------
+  function toolModels(c) { return (c.tools || []).map(function (t) { return t.model; }); }
+  function haystack(c) {
+    var bits = [c.id, L(c.app), c.app && c.app.pt, c.app && c.app.en, c.controller, c.plant,
+      c.country, c.owner, c.result, c.source, c.notes, c.status, c.confidence];
+    bits = bits.concat(c.customers || [], c.protocols || [], toolModels(c));
+    (c.needs || []).forEach(function (n) { bits.push(n.pt, n.en); });
+    (c.values || []).forEach(function (n) { bits.push(n.pt, n.en); });
+    (c.strategies || []).forEach(function (n) { bits.push(n.pt, n.en); });
+    if (c.needsRaw) bits = bits.concat(c.needsRaw.pt || [], c.needsRaw.en || []);
+    if (c.valuesRaw) bits = bits.concat(c.valuesRaw.pt || [], c.valuesRaw.en || []);
+    if (c.endFitting) bits.push(c.endFitting.pt, c.endFitting.en);
+    if (c.torqueNm) bits.push(String(c.torqueNm));
+    return bits.filter(Boolean).join(" ").toLowerCase();
+  }
+  var FACET_KEYS = ["customers", "segment", "needs", "tools", "protocols", "confidence"];
+  function facetValues(c, key) {
+    switch (key) {
+      case "customers": return c.customers || [];
+      case "segment": return [c.segment];
+      case "needs": return (c.needs || []).map(function (n) { return n.pt; });
+      case "tools": return toolModels(c);
+      case "protocols": return c.protocols || [];
+      case "confidence": return [c.confidence];
+    }
+    return [];
+  }
+  function facetLabel(key, v) {
+    if (key === "segment") return T().seg[v] || v;
+    if (key === "confidence") return T().conf[v] || v;
+    if (key === "needs") {
+      for (var i = 0; i < state.cases.length; i++) {
+        var ns = state.cases[i].needs || [];
+        for (var j = 0; j < ns.length; j++) if (ns[j].pt === v) return L(ns[j]);
+      }
+    }
+    return v;
+  }
+  // a case passes if, for every facet with selections, it matches at least one (OR within, AND across)
+  function passes(c, ignoreKey) {
+    for (var i = 0; i < FACET_KEYS.length; i++) {
+      var k = FACET_KEYS[i];
+      if (k === ignoreKey) continue;
+      var sel = filters[k];
+      if (!sel.length) continue;
+      var vals = facetValues(c, k);
+      var hit = sel.some(function (s) { return vals.indexOf(s) !== -1; });
+      if (!hit) return false;
+    }
+    if (query) { if (haystack(c).indexOf(query) === -1) return false; }
+    return true;
+  }
+  function filtered() { return state.cases.filter(function (c) { return passes(c, null); }); }
+  function sortCases(list) {
+    var arr = list.slice();
+    arr.sort(function (a, b) {
+      if (sortBy === "oem") return (b.customers || []).length - (a.customers || []).length;
+      if (sortBy === "torque") return (b.torqueNm || 0) - (a.torqueNm || 0);
+      if (sortBy === "conf") {
+        var r = (b.confidence === "verified" ? 1 : 0) - (a.confidence === "verified" ? 1 : 0);
+        if (r) return r;
+      }
+      return L(a.app).localeCompare(L(b.app), lang);
+    });
+    return arr;
+  }
+  // ---------------- render ----------------
+  function renderStatic() {
+    var t = T();
+    byId("eyebrow").textContent = t.eyebrow;
+    byId("page-title").textContent = t.title;
+    byId("q").placeholder = t.search;
+    byId("t-export").textContent = t.export;
+    byId("t-new").textContent = t.newCase;
+    byId("t-cancel").textContent = t.cancel;
+    byId("t-save").textContent = t.save;
+    byId("form-title").textContent = t.formTitle;
+    byId("t-note-h").textContent = t.noteH;
+    byId("note-body").innerHTML = t.noteP.map(function (p) { return "<p>" + p + "</p>"; }).join("");
+    byId("foot-text").textContent = t.foot;
+    byId("lang-pt").setAttribute("aria-pressed", lang === "pt");
+    byId("lang-en").setAttribute("aria-pressed", lang === "en");
+    var s = byId("sort");
+    s.innerHTML = Object.keys(t.sort).map(function (k) {
+      return '<option value="' + k + '"' + (k === sortBy ? " selected" : "") + ">" + esc(t.sort[k]) + "</option>";
+    }).join("");
+    if (!canWrite) {
+      byId("ro-banner").hidden = false;
+      byId("ro-banner").textContent = t.roBanner;
+      byId("btn-new").disabled = true;
+    }
+  }
+  function renderStats() {
+    var t = T(), cs = state.cases;
+    var oems = {}, apps = {}, ver = 0;
+    cs.forEach(function (c) {
+      (c.customers || []).forEach(function (o) { oems[o] = 1; });
+      apps[(c.app && c.app.pt) || c.id] = 1;
+      if (c.confidence === "verified") ver++;
+    });
+    var vals = [cs.length, Object.keys(oems).length, Object.keys(apps).length, ver];
+    byId("stats").innerHTML = vals.map(function (v, i) {
+      return '<div class="stat' + (i === 3 ? " accent" : "") + '"><div class="n">' + v +
+        '</div><div class="l">' + esc(t.stats[i]) + "</div></div>";
+    }).join("");
+  }
+  function renderFacets() {
+    var t = T();
+    var html = FACET_KEYS.map(function (key) {
+      // counts computed against all OTHER facets, so a facet never zeroes itself out
+      var pool = state.cases.filter(function (c) { return passes(c, key); });
+      var counts = {};
+      pool.forEach(function (c) {
+        facetValues(c, key).forEach(function (v) { counts[v] = (counts[v] || 0) + 1; });
+      });
+      var all = {};
+      state.cases.forEach(function (c) { facetValues(c, key).forEach(function (v) { all[v] = 1; }); });
+      var opts = Object.keys(all).sort(function (a, b) {
+        var d = (counts[b] || 0) - (counts[a] || 0);
+        if (d) return d;
+        return facetLabel(key, a).localeCompare(facetLabel(key, b), lang);
+      });
+      if (!opts.length) return "";
+      var open = filters[key].length || key === "customers";
+      var body = opts.map(function (v) {
+        var n = counts[v] || 0;
+        var on = filters[key].indexOf(v) !== -1;
+        return '<label class="opt' + (n === 0 && !on ? " off" : "") + '">' +
+          '<input type="checkbox" data-facet="' + key + '" value="' + esc(v) + '"' + (on ? " checked" : "") + ">" +
+          '<span class="t">' + esc(facetLabel(key, v)) + '</span><span class="c">' + n + "</span></label>";
+      }).join("");
+      return '<details class="facet"' + (open ? " open" : "") + "><summary>" + esc(t.facets[key]) +
+        '</summary><div class="facet-body">' + body + "</div></details>";
+    }).join("");
+    byId("facets").innerHTML = html;
+  }
+  function renderActive() {
+    var t = T(), chips = [];
+    FACET_KEYS.forEach(function (k) {
+      filters[k].forEach(function (v) {
+        chips.push('<span class="chip-x">' + esc(facetLabel(k, v)) +
+          '<button type="button" data-drop-facet="' + k + '" data-drop-value="' + esc(v) +
+          '" aria-label="remover">&times;</button></span>');
+      });
+    });
+    var el = byId("active");
+    el.innerHTML = chips.length
+      ? chips.join("") + '<button type="button" class="link-btn" id="clear-all">' + esc(t.clearAll) + "</button>"
+      : "";
+  }
+  function cardHTML(c) {
+    var t = T();
+    var oems = c.customers || [];
+    var shown = oems.slice(0, 5).map(function (o) { return '<span class="tag">' + esc(o) + "</span>"; }).join("");
+    if (oems.length > 5) shown += '<span class="tag">+' + (oems.length - 5) + "</span>";
+    var tools = toolModels(c).join(" · ");
+    var needs = (c.needs || []).slice(0, 3).map(function (n) { return L(n); }).join(" · ");
+    return '<button type="button" class="card" data-case="' + esc(c.id) + '">' +
+      '<div class="card-top"><span class="card-id mono">' + esc(c.id) + "</span>" +
+      '<span class="pill ' + (c.confidence === "verified" ? "ver" : "ind") + '">' +
+      esc(t.conf[c.confidence] || c.confidence) + "</span></div>" +
+      "<h3>" + esc(L(c.app)) + "</h3>" +
+      '<div class="meta">' +
+      '<span class="tag accent">' + esc(t.seg[c.segment] || c.segment) + "</span>" +
+      (c.torqueNm ? '<span class="tag torque">' + c.torqueNm + " Nm</span>" : "") +
+      (tools ? '<span class="tag">' + esc(tools) + "</span>" : "") +
+      "</div>" +
+      (needs ? '<div class="needline">' + esc(needs) + "</div>" : "") +
+      '<div class="oems">' + shown + "</div>" +
+      "</button>";
+  }
+  function renderGrid() {
+    var t = T();
+    var list = sortCases(filtered());
+    byId("count").innerHTML = t.showing(list.length, state.cases.length);
+    var g = byId("grid"), e = byId("empty");
+    if (!list.length) {
+      g.innerHTML = "";
+      e.hidden = false;
+      e.innerHTML = "<h3>" + esc(t.emptyH) + "</h3><p>" + esc(t.emptyP) + "</p>";
+    } else {
+      e.hidden = true;
+      g.innerHTML = list.map(cardHTML).join("");
+    }
+  }
+  function renderAll() { renderStatic(); renderStats(); renderFacets(); renderActive(); renderGrid(); }
+  // ---------------- detail ----------------
+  function kv(label, value) {
+    var na = !value && value !== 0;
+    return "<dt>" + esc(label) + "</dt><dd" + (na ? ' class="na"' : "") + ">" +
+      esc(na ? T().na : value) + "</dd>";
+  }
+  function openDetail(id) {
+    var c = state.cases.filter(function (x) { return x.id === id; })[0];
+    if (!c) return;
+    var t = T();
+    var raw = (c.needsRaw && c.needsRaw[lang] && c.needsRaw[lang].length)
+      ? c.needsRaw[lang] : (c.needs || []).map(function (n) { return L(n); });
+    var vraw = (c.valuesRaw && c.valuesRaw[lang] && c.valuesRaw[lang].length)
+      ? c.valuesRaw[lang] : (c.values || []).map(function (n) { return L(n); });
+    var tools = (c.tools || []).map(function (x) {
+      return (x.qty ? x.qty + "x " : "") + x.model + (x.note ? " (" + x.note + ")" : "");
+    }).join(" · ");
+    byId("detail-content").innerHTML =
+      '<div class="dlg-head"><div>' +
+      '<div class="card-id mono">' + esc(c.id) + " · " + esc(t.seg[c.segment] || c.segment) + "</div>" +
+      "<h2>" + esc(L(c.app)) + "</h2>" +
+      '<div style="margin-top:7px"><span class="pill ' + (c.confidence === "verified" ? "ver" : "ind") + '">' +
+      esc(t.conf[c.confidence] || c.confidence) + "</span></div>" +
+      '</div><button type="button" class="x" data-close-detail aria-label="Fechar">&times;</button></div>' +
+      '<div class="dlg-body">' +
+      '<div class="sec"><h4>' + esc(t.sec.needs) + "</h4><ul>" +
+      raw.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
+      '<div class="sec"><h4>' + esc(t.sec.solution) + '</h4><dl class="kv">' +
+      kv(t.k.tools, tools) +
+      kv(t.k.controller, c.controller && c.controller !== "—" ? c.controller : "") +
+      kv(t.k.protocols, (c.protocols || []).join(" · ")) +
+      kv(t.k.strategies, (c.strategies || []).map(function (s) { return L(s); }).join(" · ")) +
+      kv(t.k.endFitting, c.endFitting && L(c.endFitting) !== "—" ? L(c.endFitting) : "") +
+      kv(t.k.torque, c.torqueNm ? c.torqueNm + " Nm" : "") +
+      "</dl></div>" +
+      '<div class="sec"><h4>' + esc(t.sec.values) + "</h4><ul>" +
+      vraw.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>" +
+      '<div class="sec"><h4>' + esc(t.sec.customers) + " (" + (c.customers || []).length + ")</h4>" +
+      '<div class="meta">' + (c.customers || []).map(function (o) {
+        return '<span class="tag">' + esc(o) + "</span>";
+      }).join("") + "</div></div>" +
+      '<div class="sec"><h4>' + esc(t.sec.field) + '</h4><dl class="kv">' +
+      kv(t.k.plant, c.plant) + kv(t.k.country, c.country) + kv(t.k.date, c.date) +
+      kv(t.k.owner, c.owner) + kv(t.k.result, c.result) +
+      kv(t.k.status, t.status[c.status] || c.status) + "</dl></div>" +
+      '<div class="sec"><h4>' + esc(t.sec.source) + '</h4><dl class="kv">' +
+      kv(t.k.source, c.source) + kv(t.k.notes, c.notes) + "</dl></div>" +
+      "</div>";
+    byId("dlg-detail").showModal();
+  }
+  // ---------------- form ----------------
+  var FIELDS = [
+    ["h", "secIdent"],
+    ["id", "id", "text"], ["segment", "segment", "select"],
+    ["appPt", "appPt", "text"], ["appEn", "appEn", "text"],
+    ["h", "secApp"],
+    ["customers", "customers", "text", "customersH"],
+    ["needs", "needs", "text", "needsH"],
+    ["values", "values", "text", "needsH"],
+    ["h", "secSol"],
+    ["tools", "tools", "text", "toolsH"], ["torque", "torque", "number"],
+    ["controller", "controller", "text"], ["protocols", "protocols", "text"],
+    ["strategies", "strategies", "text"], ["endFitting", "endFitting", "text"],
+    ["h", "secField"],
+    ["plant", "plant", "text"], ["country", "country", "text"],
+    ["date", "date", "text", "dateH"], ["owner", "owner", "text"],
+    ["result", "result", "text", "resultH", true],
+    ["h", "secMeta"],
+    ["status", "status", "select"], ["confidence", "confidence", "select"],
+    ["source", "source", "text"], ["notes", "notes", "textarea", null, true]
+  ];
+  function renderForm() {
+    var t = T(), f = t.form;
+    var oemList = {};
+    state.cases.forEach(function (c) { (c.customers || []).forEach(function (o) { oemList[o] = 1; }); });
+    var html = FIELDS.map(function (spec) {
+      if (spec[0] === "h") return '<div class="fieldset-h">' + esc(f[spec[1]]) + "</div>";
+      var name = spec[1], type = spec[2], hint = spec[3], wide = spec[4];
+      var ctrl;
+      if (type === "select") {
+        var opts = name === "segment" ? t.seg : (name === "status" ? t.status : t.conf);
+        ctrl = '<select name="' + name + '">' + Object.keys(opts).map(function (k) {
+          return '<option value="' + k + '">' + esc(opts[k]) + "</option>";
+        }).join("") + "</select>";
+      } else if (type === "textarea") {
+        ctrl = '<textarea name="' + name + '"></textarea>';
+      } else {
+        ctrl = '<input type="' + type + '" name="' + name + '"' +
+          (name === "customers" ? ' list="oem-list"' : "") + ">";
+      }
+      return '<div class="f' + (wide ? " wide" : "") + '"><label>' + esc(f[name]) + "</label>" + ctrl +
+        (hint ? '<span class="hint">' + esc(f[hint]) + "</span>" : "") + "</div>";
+    }).join("");
+    html += '<datalist id="oem-list">' + Object.keys(oemList).sort().map(function (o) {
+      return '<option value="' + esc(o) + '">';
+    }).join("") + "</datalist>";
+    byId("form-fields").innerHTML = html;
+    var idEl = byId("case-form").elements.id;
+    if (idEl) idEl.value = nextId();
+    byId("form-msg").textContent = "";
+  }
+  function nextId() {
+    var n = 0;
+    state.cases.forEach(function (c) {
+      var m = /(\d+)\s*$/.exec(c.id || "");
+      if (m) n = Math.max(n, parseInt(m[1], 10));
+    });
+    return "BR-MVI-" + String(n + 1).padStart(2, "0");
+  }
+  function splitList(s) {
+    return String(s || "").split(/[,;·]/).map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+  function pair(s) { return { pt: s, en: s }; }
+  function parseTools(s) {
+    return splitList(s).map(function (item) {
+      var m = /^(\d+)\s*x\s*(.+)$/i.exec(item);
+      return m ? { model: m[2].trim(), qty: parseInt(m[1], 10), note: "" }
+        : { model: item, qty: 1, note: "" };
+    });
+  }
+  function collectCase() {
+    var el = byId("case-form").elements;
+    function v(n) { return el[n] ? String(el[n].value || "").trim() : ""; }
+    var appPt = v("appPt"), appEn = v("appEn");
+    if (!appPt && !appEn) return null;
+    var needs = splitList(v("needs")), values = splitList(v("values"));
+    return {
+      id: v("id") || nextId(),
+      app: { pt: appPt || appEn, en: appEn || appPt },
+      segment: v("segment") || "passenger",
+      customers: splitList(v("customers")),
+      needs: needs.map(pair),
+      needsRaw: { pt: needs, en: needs },
+      tools: parseTools(v("tools")),
+      controller: v("controller") || null,
+      protocols: splitList(v("protocols")),
+      strategies: splitList(v("strategies")).map(pair),
+      endFitting: pair(v("endFitting") || "—"),
+      torqueNm: v("torque") ? Number(v("torque")) : null,
+      values: values.map(pair),
+      valuesRaw: { pt: values, en: values },
+      plant: v("plant"), country: v("country"), date: v("date"), owner: v("owner"),
+      result: v("result"), status: v("status") || "reference",
+      confidence: v("confidence") || "indicative",
+      source: v("source"), notes: v("notes")
+    };
+  }
+  // ---------------- persistence ----------------
+  function saveState() {
+    if (!artifactNS) return Promise.reject({ code: "not_granted" });
+    var payload = {};
+    payload[DATA_PATH] = JSON.stringify(state);
+    return artifactNS.publish(payload);
+  }
+  function onSubmit(ev) {
+    ev.preventDefault();
+    var t = T(), msg = byId("form-msg");
+    var c = collectCase();
+    if (!c) { msg.className = "msg err"; msg.textContent = t.errName; return; }
+    state.cases.push(c);
+    msg.className = "msg";
+    msg.textContent = t.saving;
+    byId("t-save").disabled = true;
+    saveState().then(function () {
+      msg.className = "msg ok";
+      msg.textContent = t.saved;
+      renderAll();
+      setTimeout(function () { byId("dlg-form").close(); }, 700);
+    }).catch(function (err) {
+      var code = (err && err.code) || "upstream_error";
+      if (code === "conflict") { msg.className = "msg err"; msg.textContent = t.errConflict; return; }
+      if (code === "not_writer" || code === "not_granted" || code === "not_declared") {
+        canWrite = false;
+        msg.className = "msg err";
+        msg.textContent = t.errWrite;
+        renderAll();
+        return;
+      }
+      if (code === "capability_disabled" || code === "capability_removed") {
+        msg.className = "msg ok";
+        msg.textContent = t.savedLocal;
+        renderAll();
+        setTimeout(function () { byId("dlg-form").close(); }, 1400);
+        return;
+      }
+      state.cases.pop();
+      msg.className = "msg err";
+      msg.textContent = t.errSave;
+    }).then(function () { byId("t-save").disabled = false; });
+  }
+  // ---------------- export ----------------
+  function toCSV() {
+    var t = T();
+    var head = ["ID", "Operacao_PT", "Operation_EN", "Segmento", "Montadoras", "N_Montadoras",
+      "Necessidades", "Ferramentas", "Torque_Nm", "Controlador", "Protocolos", "Estrategias",
+      "End_fitting", "Valores", "Planta", "Pais", "Data", "Responsavel", "Resultado",
+      "Status", "Confianca", "Fonte", "Notas"];
+    function q(s) { return '"' + String(s == null ? "" : s).replace(/"/g, '""') + '"'; }
+    var rows = state.cases.map(function (c) {
+      return [c.id, c.app && c.app.pt, c.app && c.app.en, t.seg[c.segment] || c.segment,
+        (c.customers || []).join(", "), (c.customers || []).length,
+        (c.needs || []).map(function (n) { return n.pt; }).join(" · "),
+        (c.tools || []).map(function (x) { return (x.qty ? x.qty + "x " : "") + x.model; }).join(" · "),
+        c.torqueNm || "", c.controller || "", (c.protocols || []).join(" · "),
+        (c.strategies || []).map(function (s) { return s.pt; }).join(" · "),
+        c.endFitting ? c.endFitting.pt : "",
+        (c.values || []).map(function (n) { return n.pt; }).join(" · "),
+        c.plant, c.country, c.date, c.owner, c.result,
+        t.status[c.status] || c.status, t.conf[c.confidence] || c.confidence,
+        c.source, c.notes].map(q).join(",");
+    });
+    return "﻿" + head.map(q).join(",") + "\r\n" + rows.join("\r\n");
+  }
+  function doExport() {
+    var btn = byId("btn-export");
+    btn.disabled = true;
+    var csv = toCSV();
+    claude.use("downloads").then(function (dl) {
+      if (!dl) throw { code: "unavailable" };
+      return dl.save({ filename: "casos-aperto-manual.csv", data: csv })
+        .catch(function (e) {
+          if (e && e.code === "extension_not_enabled") {
+            return dl.save({ filename: "casos-aperto-manual.txt", data: csv });
+          }
+          throw e;
+        });
+    }).catch(function () { /* declined or unavailable — nothing to announce */ })
+      .then(function () { btn.disabled = false; });
+  }
+  // ---------------- events ----------------
+  function wire() {
+    byId("lang-pt").addEventListener("click", function () { lang = "pt"; renderAll(); });
+    byId("lang-en").addEventListener("click", function () { lang = "en"; renderAll(); });
+    var qEl = byId("q"), tmr;
+    qEl.addEventListener("input", function () {
+      clearTimeout(tmr);
+      tmr = setTimeout(function () {
+        query = qEl.value.trim().toLowerCase();
+        renderFacets(); renderGrid();
+      }, 140);
+    });
+    byId("sort").addEventListener("change", function (e) { sortBy = e.target.value; renderGrid(); });
+    byId("facets").addEventListener("change", function (e) {
+      var cb = e.target.closest("input[data-facet]");
+      if (!cb) return;
+      var k = cb.getAttribute("data-facet"), v = cb.value;
+      var i = filters[k].indexOf(v);
+      if (cb.checked) { if (i === -1) filters[k].push(v); }
+      else if (i !== -1) filters[k].splice(i, 1);
+      renderFacets(); renderActive(); renderGrid();
+    });
+    byId("active").addEventListener("click", function (e) {
+      var drop = e.target.closest("[data-drop-facet]");
+      if (drop) {
+        var k = drop.getAttribute("data-drop-facet"), v = drop.getAttribute("data-drop-value");
+        var i = filters[k].indexOf(v);
+        if (i !== -1) filters[k].splice(i, 1);
+        renderFacets(); renderActive(); renderGrid();
+        return;
+      }
+      if (e.target.id === "clear-all") {
+        FACET_KEYS.forEach(function (k) { filters[k] = []; });
+        renderFacets(); renderActive(); renderGrid();
+      }
+    });
+    byId("grid").addEventListener("click", function (e) {
+      var card = e.target.closest("[data-case]");
+      if (card) openDetail(card.getAttribute("data-case"));
+    });
+    byId("detail-content").addEventListener("click", function (e) {
+      if (e.target.closest("[data-close-detail]")) byId("dlg-detail").close();
+    });
+    byId("btn-new").addEventListener("click", function () {
+      renderForm();
+      byId("dlg-form").showModal();
+    });
+    byId("dlg-form").addEventListener("click", function (e) {
+      if (e.target.closest("[data-close-form]")) byId("dlg-form").close();
+    });
+    byId("case-form").addEventListener("submit", onSubmit);
+    byId("btn-export").addEventListener("click", doExport);
+  }
+  // ---------------- boot ----------------
+  function seed() { return JSON.parse(byId("seed-data").textContent); }
+  function loadData() {
+    return fetch(DATA_PATH, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw 0;
+      return r.json();
+    }).then(function (j) {
+      return (j && Array.isArray(j.cases) && j.cases.length) ? j : seed();
+    }).catch(function () { return seed(); });
+  }
+  Promise.all([
+    loadData(),
+    (typeof claude !== "undefined" && claude.use) ? claude.use("artifact").catch(function () { return null; }) : Promise.resolve(null)
+  ]).then(function (res) {
+    state = res[0];
+    artifactNS = res[1];
+    canWrite = !!artifactNS;
+    wire();
+    renderAll();
+  });
+})();
+</script>
+</body></html>
